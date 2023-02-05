@@ -22,17 +22,35 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            <a class="nav-link active" aria-current="page" href="/?q=all&pageno=1">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Weather</a>
+                            <a class="nav-link" href="/?q=weather&pageno=1">Weather</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Sports</a>
+                            <a class="nav-link" href="/?q=cricket&pageno=1">Cricket</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/?q=sports&pageno=1">Sports</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/?q=india&pageno=1">India</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/?q=england&pageno=1">England</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/?q=usa&pageno=1">USA</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/?q=Indian+Weather&pageno=1">Indian Weather</a>
                         </li>
                     </ul>
                     <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <input class="form-control me-2" name="q" type="search" placeholder="Search"
+                            aria-label="Search">
+                        <input class="form-control me-2" name="pageno" value="1" type="hidden" placeholder="Search"
+                            aria-label="Search">
                         <button class="btn btn-outline-light" type="submit">Search</button>
                     </form>
                 </div>
@@ -41,19 +59,13 @@
         <!-- navbar End  -->
 
         <div class="container-fluid mt-4">
+            <h1 class="text-center my-2"><span id="queryText"></span> - NewsJunky News (<span id="queryResults"></span>
+                results)
+            </h1>
             <div id="content" class="row">
-                <div class="col-sm-3">
-                    <div class="card text-bg-dark m-2" style="width: 18rem;">
-                        <img src="" class="card-img-top" alt="...">
-                        <div class="card-body text-bg-dark">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text ">Some quick example text to build on the card title and
-                                make up the bulk
-                                of the card's
-                                content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
-                        </div>
-                    </div>
+                <div class="d-flex justify-content-center">
+                    <img width="23" src="https://samherbert.net/svg-loaders/svg-loaders/oval.svg"
+                        style="filter: invert(1)">
                 </div>
             </div>
 
@@ -61,28 +73,25 @@
                 <nav aria-label="Page navigation example">
                     <ul class="pagination">
                         <li class="page-item"><a id="pre" class="page-link" href="#">Previous</a></li>
-                        <li class="page-item"><a class="page-link" href="?q=sports&pageno=1">1</a></li>
-                        <li class="page-item"><a class="page-link" href="?q=sports&pageno=2">2</a></li>
-                        <li class="page-item"><a class="page-link" href="?q=sports&pageno=3">3</a></li>
+
                         <li class="page-item"><a id="next" class="page-link" href="#">Next</a></li>
                     </ul>
                 </nav>
             </div>
+
         </div>
 
-
-
         <!-- Footer Start  -->
-        <footer class="py-3 my-4 bg-dark">
+        <footer class="py-3 my-4 mb-0 bg-dark">
             <!-- <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
-                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
-                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Pricing</a></li>
-                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
-                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
-            </ul> -->
+                        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Pricing</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
+                    </ul> -->
             <p class="text-center text-muted">© 2022 NewsJunkey, Inc</p>
-            <p class="text-center text-muted">This Web App is made With 💘 By Prabhat Patel</p>
+            <p class="text-center text-muted">This News App is made With 💘 By Prabhat Patel</p>
         </footer>
         <!-- Footer End  -->
 
