@@ -1,5 +1,6 @@
 let articlesPerPage;
 let totalPages;
+prev = document.getElementById("pbutton")
 console.log("Hey I am javascript")
 let query = window.location.search.split("?")[1].split("&")[0].split("=")[1];
 let page = parseInt(window.location.search.split("?")[1].split("&")[1].split("=")[1]);
@@ -12,8 +13,14 @@ const fetchNews = async (query, pageNo) =>
     queryText.innerHTML = query.replace("+", " ")
     queryResults.innerHTML = r.totalResults
     totalPages = Math.ceil(r.totalResults / articlesPerPage)
-    pre.href = `/?q=${query}&pageno=${page - 1}`
-    next.href = `/?q=${query}&pageno=${page + 1}`
+        next.href = `/?q=${query}&pageno=${page + 1}`
+        pre.href = `/?q=${query}&pageno=${page - 1}`
+        console.log(page)
+        if(page>1){
+            prev.style.display="block"
+        }else{
+            prev.style.display="none"
+        }
     let str = ""
     for (let item of r.articles)
     {
