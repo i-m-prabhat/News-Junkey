@@ -2,9 +2,9 @@
 
 This News App is created using HTML,CSS,JavaScript And Express Js
 
-## How to Use it
+This news app is live on <a href="https://news-junkey.onrender.com/?q=all&pageno=1">This Link.</a>
 
-Currently This News App Is not Live, If You Want to use it
+## How to Use it
 
 First clone this repo using below command
 
